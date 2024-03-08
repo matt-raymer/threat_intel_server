@@ -1,6 +1,3 @@
-Certainly! Below is a reformatted version of the README.md content, optimized for copying and pasting into a GitHub README file. This format includes Markdown syntax for better readability and organization.
-Threat Intelligence Server
-
 This project is a simple Flask application designed to serve Indicators of Compromise (IOCs) from a CSV file through a RESTful API. It's containerized with Docker for easy deployment and scalability.
 Directory Structure
 
