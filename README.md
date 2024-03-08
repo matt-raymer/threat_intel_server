@@ -1,3 +1,4 @@
+Certainly! Below is a reformatted version of the README.md content, optimized for copying and pasting into a GitHub README file. This format includes Markdown syntax for better readability and organization.
 Threat Intelligence Server
 
 This project is a simple Flask application designed to serve Indicators of Compromise (IOCs) from a CSV file through a RESTful API. It's containerized with Docker for easy deployment and scalability.
@@ -14,31 +15,30 @@ graphql
 
 Requirements
 
-    Docker installed on your host machine
-    Basic knowledge of Docker commands and operations
+    Docker installed on your host machine.
+    Basic knowledge of Docker commands and operations.
 
 Deployment Instructions
+1. Prepare the CSV File
 
-    Prepare the CSV File: Place your IOC data in a CSV file within the data directory. The CSV file should have headers corresponding to the data fields.
+Place your IOC data in a CSV file within the data directory. The CSV file should have headers corresponding to the data fields.
+2. Build the Docker Image
 
-    Build the Docker Image:
+Navigate to the root directory of the project (threat_intel_server) and run the following command to build the Docker image:
 
-    Navigate to the root directory of the project (threat_intel_server) and run the following command to build the Docker image:
-
-    bash
+bash
 
 docker build -t flask-ti-server .
 
-Run the Docker Container:
+3. Run the Docker Container
 
 After building the image, run the container with the following command, which mounts the data directory and forwards port 8000:
 
 bash
 
-    docker run -p 8000:8000 -v $(pwd)/data:/data flask-ti-server
+docker run -p 8000:8000 -v $(pwd)/data:/data flask-ti-server
 
-    Ensure to replace $(pwd) with the absolute path to the data directory if you're not running the command from the root project directory on Linux or macOS. On Windows, specify the full path manually.
-
+Ensure to replace $(pwd) with the absolute path to the data directory if you're not running the command from the root project directory on Linux or macOS. On Windows, specify the full path manually.
 Accessing the Application
 
 Once the application is running, you can access the IOC data through the following API endpoint:
