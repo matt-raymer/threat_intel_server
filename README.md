@@ -3,8 +3,6 @@ Threat Intelligence Server
 This project is a simple Flask application designed to serve Indicators of Compromise (IOCs) from a CSV file through a RESTful API. It's containerized with Docker for easy deployment and scalability.
 Directory Structure
 
-graphql
-
 /threat_intel_server
   ├── app.py              # Flask application file
   ├── Dockerfile          # Dockerfile for building the application container
@@ -43,14 +41,10 @@ Accessing the Application
 
 Once the application is running, you can access the IOC data through the following API endpoint:
 
-arduino
-
 http://<host_ip>:8000/api/iocs
 
 Replace <host_ip> with the IP address of the machine where the Docker container is running. If testing locally, you can use localhost or 127.0.0.1.
 Example curl Request
-
-bash
 
 curl http://localhost:8000/api/iocs
 
